@@ -1,0 +1,118 @@
+@charset "utf-8";
+/* Exercise 5 CSS Document*/
+
+body {
+    font-family:"Trebuchet MS", Segoe, sans-serif;
+    margin:40px;
+    font-size: 1.2em;
+}
+        
+#lowerbody {
+    position: absolute;
+    background-color: #FFF8DC;
+    width: 550px;
+    height: 400px;
+    margin-left: 80px;
+    top:100px;
+    border: 1px solid grey;
+}
+        
+#lowerbody h1 {
+    font-size:24px;
+    margin-left: 40px;
+    margin-top 20px;
+}  
+        
+#lowerbody p {
+    margin-left: 40px;
+}
+        
+        
+        
+#red {
+    margin-left: 40px;
+    height: 85px;
+    width: 85px;
+    border: 1px solid grey;
+} 
+        
+#red p {
+    color: red;
+    margin-top: 5px;
+    margin-left: 25px;
+}  
+        
+#redInput {
+    margin-left: 15px;
+    height: 20px;
+    width: 45px;
+} 
+        
+#green {
+    margin-top: -86px;
+    margin-left: 145px;
+    height: 85px;
+    width: 85px;
+    border: 1px solid grey;
+}
+        
+#green p {
+    color: green;
+    margin-top: 5px;
+    margin-left: 15px;
+} 
+        
+#greenInput {
+    margin-left: 15px;
+    height: 20px;
+    width: 45px;
+} 
+        
+#blue {
+    margin-top: -87px;
+    margin-left: 250px;
+    height: 85px;
+    width: 85px;
+    border: 1px solid grey;
+}
+        
+#blue p {
+    color: blue;
+    margin-top: 5px;
+    margin-left: 20px;
+}  
+        
+#blueInput {
+    margin-left: 15px;
+    height: 20px;
+    width: 45px;
+}
+        
+#btnShow {
+    margin-top: -87px;
+    margin-left: 350px;
+}
+        
+#btnClear {
+    margin-top: 0;
+    margin-left: 350px;
+}
+        
+#colorBox {
+    width: 400px;
+    height: 50px;
+    margin-left: 40px;
+    margin-bottom: 50;
+    margin-top: 87px;
+}
+        
+
+
+
+
+
+
+
+    
+    
+
