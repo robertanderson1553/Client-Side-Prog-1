@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML 5 Web Storage</title>
+
+<link href="reset.css" type="text/css" rel="stylesheet" />
+
+<link href="webStorage_Style.css" type="text/css" rel="stylesheet" />
+
+<script>
+    window.addEventListener("load",init);
+    
+    function init(){
+        if(typeof(Storage)!=="undefined"){
+            display();
+            
+            var button=document.getElementById("button");
+            button.addEventListener("click",saveInfo);
+	   }
+	   else{
+	   //old bowser	
+	   }
+    }
+
+    function saveInfo(){
+	   var donutType=document.getElementById("donutType").value;
+       var donutQuanity=document.getElementById("donutQuanity").value;
+       var donutExtras=document.getElementById("donutExtras").value;
+	   var comments=document.getElementById("comments").value;
+        	
+	   localStorage.setItem("donutType",donutType);
+       localStorage.setItem("donutQuanity",donutQuanity);
+       localStorage.setItem("donutExtras",donutExtras);
+	   localStorage.setItem("userComments",comments);
+	
+	
+	   display();
+	}
+
+    function display(){
+        var rightBox=document.getElementById("useroutput");
+	    var theDonutType=localStorage.getItem("donutType");
+        var theDonutQuanity=localStorage.getItem("donutQuanity");
+        var theDonutExtras=localStorage.getItem("donutExtras");
+	    var theComments=localStorage.getItem("userComments");
+        
+        if (theComments==undefined) {
+            document.getElementById("useroutput").innerHTML="";
+        }
+        else
+        { 
+            document.getElementById("useroutput").innerHTML="Your donut order is being packaged!  <hr /><br /><br />The Donut: "+ theDonutType + "<br /><br />  Quanity Ordered: " + theDonutQuanity + "<br /><br />  Extras (Toppings): " + theDonutExtras + "<br /><br />  Special Instructions: " + theComments + "<br /><br />  " + "<img src='donuts.jpg' alt='plate of donuts' />";
+        }
+    }
+</script>
+</head>
+    <body>
+        <div id="main">
+            <section id="userinput">
+                Welcome to Joe's Donuts<br>
+                <hr />
+                <br /><br />
+                
+                <form>
+                    <div id="donutTypeGroup">
+                        Donut Type: <br />
+                        
+                        <select id = "donutType">
+                            <option value="#">Select a donut type:</option>
+                            <option value="Glazed">Glazed</option>
+                            <option value="Twist">Twist</option>
+                            <option value="Maple Bar">Maple Bar</option>
+                            <option value="Chocolate covered with custard">Chocolate covered with custard</option>
+                        </select>  
+                    </div>
+                    <br />
+                    
+                    <div id="donutQuanityGroup" input type="input" size="20">
+                        Quanity: <br />
+                        
+                        <select id = "donutQuanity">
+                            <option value="#">Select a donut quanity:</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>  
+                    </div>
+                    <br />   
+                    
+                    <div>Custom Extras (toppings): <br /><input type="text" id="donutExtras" size="20"></div>
+                    <br /> 
+                    <div>Special Instructions:<br /> <textarea id="comments" rows="10"></textarea></div>
+                    <br />
+                    <div><input type="button" id="button" value="Save"></div>
+                </form>
+            </section>
+            
+            <section id="useroutput">
+                OUTPUT 
+                <hr />
+                <br /><br />
+            </section>
+        </div>
+    </body>
+</html>
