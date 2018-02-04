@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* Exercise 6 CSS Document*/
+
+body {
+    font-family:"Trebuchet MS", Segoe, sans-serif;
+    margin:40px;
+    font-size: 1.2em;
+}
+        
+#main {
+    width:750px; height:500px;
+    margin:0 auto;	
+    padding:20px;
+	background-color:#CCCCCC;
+}
+        
+
+
+
+
+
+
+
+    
+    
+
